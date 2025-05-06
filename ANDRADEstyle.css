@@ -76,7 +76,6 @@ nav {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
 .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -84,4 +83,5 @@ nav {
     color: white;
     text-align: center;
     padding: 10px;
+    margin-top: 20px; 
 }
