@@ -1,0 +1,55 @@
+
+    body{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .cajitas-1{
+        background-color:#222E50;
+        text-align:center;
+        display:grid;
+    }
+    
+    .cajitasmaspeque-1{
+        background-color:#3E5168;
+        text-align:center;
+        display:grid;
+            }
+
+
+    .cajitas-2{
+        background-color:#597380;
+        text-align:center;
+        display:grid;
+    }
+    .cajitasmaspeque-2{
+        background-color:#8FB7B0;
+        text-align:center;
+        display:grid;
+            }
+
+
+    .cajitas-3{
+        background-color:#C1D3C8;
+        text-align:center;
+        display:grid;
+    }
+    .cajitasmaspeque-3{
+        background-color:#F3EFE0;
+        text-align:center;
+        display:grid;
+            }
+
+
+
+    header{
+        background-color:#3E5168;
+    }
+
+    
+          
+
+    h1{
+        text-align:center;
+    }
+    
+   
