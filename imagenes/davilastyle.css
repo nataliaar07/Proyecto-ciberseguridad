@@ -8,22 +8,19 @@ nav {
     height: 80px;
 }
 
-
-.nav-contenedor {  
+.nav-contenedor {
     display: flex;
     height: 100%;
-    align-items: center;  
+    align-items: center;
 }
-
 
 .menu {
     list-style: none;
     display: flex;
     margin-left: 10px;
-    gap: 10px;  
+    gap: 10px;
     padding: 5px;
 }
-
 
 .ROBOT img {
     border-radius: 50%;
@@ -31,11 +28,9 @@ nav {
     height: 60px;
 }
 
-
 .menu li {
     font-size: medium;
 }
-
 
 .menu a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -45,59 +40,57 @@ nav {
     display: block;
 }
 
-
 .menu a:hover {
     background-color: #633533;
     border-radius: 5px;
 }
 
-
 .imageness {
     padding: 0%;
 }
-
 
 .bodyimagenes {
     font-family: sans-serif;
     margin: 0;
     padding: 20px;
-  }
+}
 
-
-  .galeria {
+.galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Explicitly define grid columns */
+    grid-template-columns: 1fr 1fr; /* Two columns */
     gap: 20px;
-  }
+}
 
-
-  .item {
+.item {
     border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
+}
 
-
-  .itemposter {
+/* Make the poster span both columns */
+.itemposter {
     border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 700px;
-  }
+    grid-column: span 2; /* Span two columns */
+}
 
-
-  .item img {
+.item img {
     width: 100%;
     height: auto;
     display: block;
-  }
+}
 
-
-  .item p {
+.item p {
     text-align: center;
     padding: 10px;
     background-color: #f8f8f8;
     margin: 0;
-  }
+}
+
+.derecha {
+    text-align: right;
+}
