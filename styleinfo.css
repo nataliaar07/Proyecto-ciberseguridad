@@ -41,15 +41,30 @@
 
 
 
-    header{
-        background-color:#3E5168;
+    header {
+        background-color: #E9B6B4;
+        Color:#633533;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    header nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        flex-wrap: wrap;
     }
 
+    header nav ul li {
+        margin: 0 15px;
+    }
+
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
     
           
-
-    h1{
-        text-align:center;
-    }
-    
    
