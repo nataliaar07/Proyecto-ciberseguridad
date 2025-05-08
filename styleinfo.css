@@ -51,13 +51,11 @@ text-align:center;
 .izquierda{
     flex: 2;
     min-width:300px;
-
 }
 
 .derecha{
-    flex: 1;
-    min-width:250px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .cajitas-1, .cajitas-2, .cajitas-3  {
@@ -86,4 +84,29 @@ ul {
 
 ul li {
     margin-bottom: 10px;
+}
+
+.galeriamini {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.galeriamini img {
+    width: calc(33.333% - 10px);
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.galeriamini img:hover {
+    transform: scale(1.1);
+}
+
+.amenazas{
+  margin-left: 30px;
 }
