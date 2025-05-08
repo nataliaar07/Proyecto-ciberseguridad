@@ -1,70 +1,89 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin:0;
+    padding:0;
+    background-color:#F3EFE0;
+    color:#E9B6B4;
+}
 
-    body{
-        font-family: 'Courier New', Courier, monospace;
-    }
-    
-    .cajitas-1{
-        background-color:#222E50;
-        text-align:center;
-        display:grid;
-    }
-    
-    .cajitasmaspeque-1{
-        background-color:#3E5168;
-        text-align:center;
-        display:grid;
-            }
+header{
+    background-color:#222E50;
+    color:#3E5168;
+    padding:20px;
+    text-align:center;
+}
 
+header nav ul{
+    display:flex;
+    justify-content:center;
+    margin-top:10px;
+    padding:0;
+    flex-wrap:wrap;
+}
 
-    .cajitas-2{
-        background-color:#597380;
-        text-align:center;
-        display:grid;
-    }
-    .cajitasmaspeque-2{
-        background-color:#8FB7B0;
-        text-align:center;
-        display:grid;
-            }
+header nav ul li {
+    margin: 0 15px;
+}
 
+header nav ul li a {
+    color:#597380;
+    font-size:18px;
+}
 
-    .cajitas-3{
-        background-color:#C1D3C8;
-        text-align:center;
-        display:grid;
-    }
-    .cajitasmaspeque-3{
-        background-color:#F3EFE0;
-        text-align:center;
-        display:grid;
-            }
+.informacion h1, .quees h2 {
+    text-align:center;
+    margin-top:30px;
+}
 
+.quees-2 h3{
+margin:10px auto;
+text-align:center;
+}
 
+.contenedor{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin:40px auto;
+    padding: 0 20px;
+}
 
-    header {
-        background-color: #E9B6B4;
-        Color:#633533;
-        padding: 20px;
-        text-align: center;
-    }
-    
-    header nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-        flex-wrap: wrap;
-    }
+.izquierda{
+    flex: 2;
+    min-width:300px;
 
-    header nav ul li {
-        margin: 0 15px;
-    }
+}
 
-    header nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-    }
-    
-          
-   
+.derecha{
+    flex: 1;
+    min-width:250px;
+
+}
+
+.cajitas-1, .cajitas-2, .cajitas-3  {
+    background-color: #222E50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.cajitasmaspeque-1, .cajitasmaspeque-2, .cajitasmaspeque-3{
+    background-color: #3E5168;
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+dl h3, dd h3 {
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
