@@ -2,15 +2,20 @@ body{
     font-family: 'Courier New', Courier, monospace;
     margin:0;
     padding:0;
-    background-color:#F3EFE0;
+    background: #E9B6B4;
+    background: #597380;
+background: radial-gradient(circle, rgba(89, 115, 128, 1) 0%, rgba(62, 81, 104, 1) 100%);
     color:#E9B6B4;
+    border:dotted 10px #8FB7B0;
 }
 
 header{
     background-color:#222E50;
-    color:#3E5168;
+    color:#8FB7B0;
     padding:20px;
     text-align:center;
+    font-size: 30px;
+    border:solid 10px #8FB7B0;
 }
 
 header nav ul{
@@ -33,11 +38,13 @@ header nav ul li a {
 .informacion h1, .quees h2 {
     text-align:center;
     margin-top:30px;
+    color:#222E50;
 }
 
 .quees-2 h3{
 margin:10px auto;
 text-align:center;
+color:#222E50;
 }
 
 .contenedor{
@@ -58,19 +65,49 @@ text-align:center;
     flex-direction: column;
 }
 
-.cajitas-1, .cajitas-2, .cajitas-3  {
-    background-color: #222E50;
-    color: white;
+
+.cajitas-1{
+    background-color: #C1D3C8;
+    color: #F3EFE0;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+.cajitas-2{
+    background-color: #597380;
+    color: #8FB7B0;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+.cajitas-3{
+    background-color: #C1D3C8;
+    color: #F3EFE0;
     text-align: center;
     padding: 15px;
     border-radius: 10px 10px 0 0;
 }
 
-.cajitasmaspeque-1, .cajitasmaspeque-2, .cajitasmaspeque-3{
-    background-color: #3E5168;
-    color: white;
+.cajitasmaspeque-1{
+    background-color: #F3EFE0;
+    color: #C1D3C8;
     padding: 20px;
     border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+.cajitasmaspeque-2{
+    background-color: #8FB7B0;
+    color: #597380;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+.cajitasmaspeque-3{
+    background-color: #F3EFE0;
+    color: #C1D3C8;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
 }
 
 dl h3, dd h3 {
@@ -109,4 +146,11 @@ ul li {
 
 .amenazas{
   margin-left: 30px;
+}
+
+footer{
+    text-align:center;
+    background-color: #3E5168;
+    color:#597380;
+    font-size: 30px;
 }
