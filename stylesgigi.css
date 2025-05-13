@@ -1,23 +1,22 @@
-/* General Styles */
-
+/* Se aplican a todos los elementos para eliminar márgenes y rellenos predeterminados y permitir un diseño más limpio y controlado desde cero.*/
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Estilo base del cuerpo (body) de la página. Se aplica un degradado de fondo con colores fríos que generan un ambiente tecnológico, ideal para temas como la ciberseguridad. Se define la fuente como 'monospace'para una apariencia técnica.*/
 body {
-    background: linear-gradient(135deg
-    ,#8FB7B0, #597380, #3E5168, #222E50,
-    #5a4894);
+    background: linear-gradient(135deg, #8FB7B0, #597380, #3E5168, #222E50, #5a4894);
     color: #000000;
     font-family: monospace;
 }
-a:link{
+
+/* Enlaces a paginas externas. El color azul oscuro armoniza con el fondo y mantiene buena legibilidad.*/
+a:link {
     color: #222E50;
 }
 
-/* HEADER */
-
+/* Estilo de los encabezados con clase 'title'. El estilo está preparado para dar formato centrado, con separación vertical y tamaño pequeño.*/
 .title h1 {
     padding: 20px 0;
     text-align: center;
@@ -25,93 +24,108 @@ a:link{
     text-transform: uppercase;
 }
 
-/* CONTAINER */
-
+/* Aquí se usa CSS GRID como sistema de maquetación principal. El contenedor tiene un máximo de 1000px de ancho, está centrado en la página, y se divide en 5 columnas iguales (grid-template-columns: repeat(5, 1fr)). Se aplica un espacio (gap) entre las celdas.*/
 .container {
     width: 90%;
     max-width: 1000px;
     margin: 1.6em auto;
-    display: grid;
+    display: grid; /* ← GRID DEFINIDO AQUÍ */
     gap: 1.6em;
     grid-template-columns: repeat(5, 1fr);
 }
 
-.container>.header, .container>.content, .container>.sidebar, .container>.footer, .container>div {
+/* Estilo común para los elementos que estan adrentro de .container: header, content, sidebar, footer y related-post. Se establece fondo, padding y borde para crear bloques diferenciados.*/
+.container > .header, .container > .content, .container > .sidebar, .container > .footer, .container > div {
     background: #8FB7B0;
     padding: 20px;
     border: 1px solid #000000;
 }
 
-.container>.header, .container>.footer {
-    grid-column: 1/-1;
+/* El header y footer ocupan TODAS las columnas del grid (1 a -1) y tienen fondo oscuro con texto blanco para destacarlos visualmente.*/
+.container > .header,
+.container > .footer {
+    grid-column: 1 / -1; /* ← OCUPA TODAS LAS COLUMNAS DEL GRID */
     background-color: #222E50;
     color: #ffffff;
 }
 
-.container>.content {
+/* La sección principal de contenido (main.content) ocupa 3 columnas y 4 filas de altura, dentro del grid. Es el área donde se muestran los artículos informativos.*/
+.container > .content {
     grid-column: span 3;
     grid-row: span 4;
 }
 
-.content>.article {
+/* Cada artículo dentro de la sección de contenido tiene su propio fondo, padding para separar el texto, y un pequeño margen entre ellos.*/
+.content > .article {
     background: #F3EFE0;
     padding: 20px;
     margin-top: 5px;
     color: #597380;
 }
 
+/* Estilo adicional para el contenido de cada artículo. Se añade padding a los encabezados y párrafos internos.*/
 .content .article h1,
 .content .article p {
     padding: 10px;
 }
 
-.container>.sidebar {
+/* La barra lateral usa GRID para posicionarse, y FLEXBOX internamente para centrar sus elementos.*/
+.container > .sidebar {
     grid-column: span 2;
     grid-row: span 4;
     background: #3E5168;
     color: #ffffff;
+
+/* Utilización del flexbox pra centra vertical y horizontalmente lo que se encuantra en el sidebar */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Las imágenes dentro del sidebar ocupan el ancho completo de su contenedor y tienen un pequeño margen superior.*/
 .container .sidebar img {
     display: block;
     width: 100%;
     margin-top: 5px;
 }
 
-.container>.related-post {
+/* Cada bloque de navegación (related-post) se diseña con FLEXBOX para centrar el enlace tanto horizontal como verticalmente. Este estilo proporciona una apariencia uniforme a los botones.*/
+.container > .related-post {
     background: #C1D3C8;
     color: #ffffff;
-    width:auto;
-    ;
-    display: flex;
+
+    display: flex;  /* ← FLEXBOX USADO PARA CENTRADO DE CONTENIDO */
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease;
 }
 
-.container>.related-post:hover {
+/* Al pasar el mouse sobre los botones de navegación, se invierten los colores para hacerlos interactivos.*/
+.container > .related-post:hover {
     cursor: pointer;
     color: #000000;
     background: #ffffff;
 }
 
-/* MEDIA QUERIES */
-
+/* Ajustes para pantallas pequeñas (como móviles). Reorganiza los elementos del grid para que ocupen todo el ancho disponible en una sola columna.*/
 @media screen and (max-width: 768px) {
     .header {
         text-align: center;
     }
+
+    /* El contenido ahora ocupa toda la fila */
     .container .content {
         grid-column: 1 / -1;
     }
+
+    /* La barra lateral también ocupa toda la fila */
     .container .sidebar {
         grid-column: 1 / 6;
     }
 
+    /* Los botones de navegación se acomodan uno debajo de otro */
     .container .related-post {
-        grid-column: 1/-1;
+        grid-column: 1 / -1;
     }
 }
+
